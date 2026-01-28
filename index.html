@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5m-4</title>
+      <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <div class="container mx-auto py-[10px] px-[10px]">
+        <div class="flex gap-[100px] pt-[50px] justify-center">
+        <div  class="flex flex-col ">
+          <h4 class="text-3xl font-extrabold text-center">Lifes left:</h4>
+          <div class=" flex gap-[5px]">
+            <div id="heart1">
+            <img src="/public/heart.png" alt="" class="max-w-[50px]">
+            </div>
+            <div id="heart2">
+            <img src="/public/heart.png" alt="" class="max-w-[50px]">
+            </div>
+            <div id="heart3">
+            <img src="/public/heart.png" alt="" class="max-w-[50px]">
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-[10px] pt-[100px]" id="main-game-block">
+          <div class="columns">
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        <div class="cards box  shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        </div>
+          <div class="columns">
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        </div>
+          <div class="columns">
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        <div class="cards box shadow-[inset_0px_0px_35px_18px_rgba(255,255,255,0.31)]">
+        </div>
+        </div>
+        </div>
+        <div class="flex flex-col gap-[20px]">
+          <button id="start-btn" class="px-[40px] py-[20px] bg-[#464541] text-[#ffffff] text-2xl rounded-3xl font-extrabold cursor-pointer" >Start the game</button>
+          <div class="flex items-center justify-center secundomer">
+            <p class="text-4xl font-extrabold">3</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>
