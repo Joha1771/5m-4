@@ -10,7 +10,7 @@ let timerId = null;
 let gameId = null;
 let lives = 3;
 
-startBtnElement.addEventListener ("click",() => {
+startBtnElement.addEventListener("click", () => {
   startBtnElement.disabled = true;
   secundomerElement.textContent = 3;
   lives = 3;
@@ -29,6 +29,7 @@ startBtnElement.addEventListener ("click",() => {
 
 function startGame() {
   gameId = setInterval(() => {
+
     boxElement.forEach((box) => {
       box.innerHTML = "";
       box.onclick = null;
@@ -36,34 +37,40 @@ function startGame() {
 
     const randomIndex = Math.floor(Math.random() * boxElement.length);
     const currentBox = boxElement[randomIndex];
-
     let isHit = false;
 
-    currentBox.innerHTML = `<img src="/shark1.png">`;
+    currentBox.innerHTML = `<img src="/shark1.png" style="width: 100%; height: 100%;">`;
 
     currentBox.onclick = () => {
-      isHit = true;
+      isHit = true; 
+      currentBox.onclick = null; 
+      currentBox.innerHTML = ""; 
+      
       alert("Molodes yuttiz gap yo");
+      
       clearInterval(gameId);
       startBtnElement.disabled = false;
     };
 
+
     setTimeout(() => {
+
+      if (isHit) return;
+
+
       currentBox.innerHTML = "";
-
-      if (!isHit) {
-        lives--;
-
-        if (lives >= 0) {
-          hearts[lives].style.opacity = "0";
-        }
-
-        if (lives === 0) {
-          alert("Yutqazib qoydisu bitta youtube dan guide korvorin endi");
-          clearInterval(gameId);
-          startBtnElement.disabled = false;
-        }
+      currentBox.onclick = null;
+      
+      lives--;
+      if (lives >= 0) {
+        hearts[lives].style.opacity = "0";
       }
-    }, 250);
-  }, 2500);
+
+      if (lives <= 0) {
+        alert("Yutqazib qoydisu...");
+        clearInterval(gameId);
+        startBtnElement.disabled = false;
+      }
+    }, 500); 
+  }, 2500); 
 }

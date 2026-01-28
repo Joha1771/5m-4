@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .cards{
-    @apply w-[200px] bg-[#1d1d1d] h-[200px]  rounded-3xl flex items-center justify-center ;
+    @apply w-[200px] bg-[#1d1d1d] h-[200px]  rounded-3xl flex items-center justify-center cursor-pointer;
 }
 
 .columns{
