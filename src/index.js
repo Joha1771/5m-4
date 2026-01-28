@@ -39,7 +39,7 @@ function startGame() {
 
     let isHit = false;
 
-    currentBox.innerHTML = `<img src="/public/shark1.png" style="width:100%">`;
+    currentBox.innerHTML = `<img src="/shark1.png">`;
 
     currentBox.onclick = () => {
       isHit = true;
